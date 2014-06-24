@@ -5,6 +5,7 @@
 An opionated setup for frontend development using [Browserify](http://browserify.org/), [stylus](http://learnboost.github.io/stylus/), [nib](https://github.com/visionmedia/nib), [GNU Make](http://www.gnu.org/software/make/) and [git](http://git-scm.com/).
 
 ## Getting Started
+You will need to have [node.js](http://nodejs.org/) and [npm](https://www.npmjs.org/) installed. In addition, you should have python available for the dev server.
 ```bash
 $ git clone https://github.com/Hanse/asamoah
 $ cd asamoah
