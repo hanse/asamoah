@@ -29,7 +29,7 @@ $ PORT=2345 make server
 All uncompiled JS and CSS/Stylus assets reside in the `assets/` directory. They are by default compiled into `public/app.js` and `public/app.css` respectively. This can be changed in the `Makefile`. Having compiled files in the public directory makes it trivial to serve this folder from [nginx]() without serving the source files for example.
 
 ## Watching For Changes
-It can be cumbersome to run `make` for every change. A way to solve this is to use [visionmedia/watch]() for periodical runs:
+It can be cumbersome to run `make` for every change. A way to solve this is to use [visionmedia/watch](https://github.com/visionmedia/watch) for periodical runs:
 
 ```bash
 $ watch make
