@@ -1,25 +1,46 @@
 @import 'nib'
 
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700')
+
 global-reset()
 
 *
   box-sizing border-box
   font-smoothing anti-aliased
 
+a
+  text-decoration none
+  color #c0392b
+
+  &:hover
+    text-decoration underline
+
 body
   font-size 1.2em
   line-height 1.8
-  font-family 'Helvetica Neue', Helvetica, sans-serif
+  font-family 'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif
   max-width 800px
   margin 0 auto
 
+
 h1
-  font-size 2em
+  font-size 2.2em
+  font-weight 700
+  text-align center
 
 h2
   font-size 1.6em
   font-weight 700
 
-@media (max-width: 64em)
+blockquote
+  border-left 4px solid #ddd
+  padding 10px 20px
+
+footer
+  padding 20px
+  text-align center
+  color #777
+
+@media (max-width: 800px)
   body
     padding 2em
