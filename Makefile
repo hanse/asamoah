@@ -75,7 +75,8 @@ endif
 #
 
 server:
-	cd public && python -m SimpleHTTPServer $(PORT)
+	@echo "-> Server running on $(PORT)"
+	@cd public && python -m SimpleHTTPServer $(PORT)
 
 #
 # Remove build files

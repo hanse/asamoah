@@ -27,10 +27,10 @@ $ PORT=2345 make server
 -> Server running on localhost:2345
 ```
 
-## Directory Structure
+## Directory structure
 All uncompiled JS and CSS/Stylus assets reside in the `assets/` directory. They are by default compiled into `public/app.js` and `public/app.css` respectively. This can be changed in the `Makefile`. Having compiled files in the public directory makes it trivial to serve this folder from [nginx]() without serving the source files for example.
 
-## Watching For Changes
+## Re-running `make`
 It can be cumbersome to run `make` for every change. A way to solve this is to use [visionmedia/watch](https://github.com/visionmedia/watch) for periodical runs:
 
 ```bash
@@ -42,6 +42,32 @@ JS and CSS files are by default compressed when `NODE_ENV` is set to something o
 
 ```bash
 $ NODE_ENV=production make
+```
+
+## Using with React.js
+To use with [React.js](http://facebook.github.io/react/), install [reactify](https://github.com/andreypopp/reactify)
+```bash
+$ npm install --save reactify react
+```
+and add `TRANSFORMS = -t reactify` to the `Makefile`. Don't forget to add `/** @jsx React.DOM */` to the top of the files containing JSX.
+
+```js
+/** @jsx React.DOM */
+
+var React = require('react');
+
+var App = React.createClass({
+	render: function() {
+		return (
+			<h1>Asamoah</h1>
+		);
+	}
+})
+
+React.renderComponent(
+	<App />,
+	document.body
+);
 ```
 
 ## License
