@@ -1,11 +1,11 @@
 ![Asamoah](http://f.cl.ly/items/072x3T3D1O0e1K1F051c/Asamoah.png)
 
-> Opionated frontend setup for Browserify, stylus, nib and GNU Make.
+> Opinionated frontend setup for Browserify, stylus, nib and GNU Make.
 
-An opionated setup for frontend development using [Browserify](http://browserify.org/), [stylus](http://learnboost.github.io/stylus/), [nib](https://github.com/visionmedia/nib), [GNU Make](http://www.gnu.org/software/make/) and [git](http://git-scm.com/).
+An opinionated setup for frontend development using [Browserify](http://browserify.org/), [stylus](http://learnboost.github.io/stylus/), [nib](https://github.com/visionmedia/nib), [GNU Make](http://www.gnu.org/software/make/) and [git](http://git-scm.com/).
 
 ## Getting Started
-You will need to have [node.js](http://nodejs.org/) and [npm](https://www.npmjs.org/) installed. In addition, you should have python available for the dev server.
+You will need to have [node.js](http://nodejs.org/) and [npm](https://www.npmjs.org/) installed. In addition, you should have python available for the development server.
 ```bash
 $ git clone https://github.com/Hanse/asamoah
 $ cd asamoah
@@ -28,7 +28,7 @@ $ PORT=2345 make server
 ```
 
 ## Directory structure
-All uncompiled JS and CSS/Stylus assets reside in the `assets/` directory. They are by default compiled into `public/app.js` and `public/app.css` respectively. This can be changed in the `Makefile`. Having compiled files in the public directory makes it trivial to serve this folder from [nginx]() without serving the source files for example.
+All uncompiled JS and CSS/Stylus assets reside in the `assets/` directory. They are by default compiled into `public/app.js` and `public/app.css` respectively. This can be changed in the `Makefile`. Having compiled files in the public directory makes it trivial to serve this folder from [nginx](http://nginx.org/) without serving the source files for example.
 
 ## Re-running `make`
 It can be cumbersome to run `make` for every change. A way to solve this is to use [visionmedia/watch](https://github.com/visionmedia/watch) for periodical runs:
