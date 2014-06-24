@@ -1,4 +1,4 @@
-# asamoah
+![Asamoah](http://f.cl.ly/items/072x3T3D1O0e1K1F051c/Asamoah.png)
 
 > Opionated frontend setup for Browserify, stylus, nib and GNU Make.
 
