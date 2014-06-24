@@ -4,8 +4,9 @@
 #
 
 STYLUS     = node_modules/.bin/stylus
-NIB        = node_modules/nib/lib
 UGLIFY     = node_modules/.bin/uglifyjs
+BROWSERIFY = node_modules/.bin/browserify
+NIB        = node_modules/nib/lib
 
 #
 # The dev server PORT
@@ -53,9 +54,9 @@ all: $(BUILD_CSS) $(BUILD_JS)
 
 $(BUILD_CSS): $(CSS)
 ifneq ($(NODE_ENV), development)
-	stylus --include $(NIB) --compress < $(CSS_MAIN) > $(BUILD_CSS)
+	$(STYLUS) --include $(NIB) --compress < $(CSS_MAIN) > $(BUILD_CSS)
 else
-	stylus --include $(NIB) < $(CSS_MAIN) > $(BUILD_CSS)
+	$(STYLUS) --include $(NIB) < $(CSS_MAIN) > $(BUILD_CSS)
 endif
 
 #
@@ -64,9 +65,9 @@ endif
 
 $(BUILD_JS): $(JS)
 ifneq ($(NODE_ENV), development)
-	browserify $(TRANSFORMS) $(JS_MAIN) | $(UGLIFY) > $(BUILD_JS)
+	$(BROWSERIFY) $(TRANSFORMS) $(JS_MAIN) | $(UGLIFY) > $(BUILD_JS)
 else
-	browserify $(TRANSFORMS) $(JS_MAIN) > $(BUILD_JS)
+	$(BROWSERIFY) $(TRANSFORMS) $(JS_MAIN) > $(BUILD_JS)
 endif
 
 #
