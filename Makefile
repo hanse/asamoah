@@ -24,8 +24,8 @@ JS_MAIN    = assets/js/index.js
 # All CSS and JS files (used for file watching)
 #
 
-CSS        = $(wildcard assets/css/*.styl)
-JS         = $(wildcard assets/js/*.js)
+CSS        = $(shell find assets/css -name "*.styl")
+JS         = $(shell find assets/css -name "*.js")
 
 #
 # Compiled CSS and JS Files
