@@ -2,7 +2,7 @@
 
 > Opionated frontend setup for Browserify, stylus, nib and GNU Make.
 
-An opionated setup for frontend development using [browserify](http://browserify.org/), [stylus](http://learnboost.github.io/stylus/), [nib](https://github.com/visionmedia/nib), [GNU Make](http://www.gnu.org/software/make/) and [git](http://git-scm.com/).
+An opionated setup for frontend development using [Browserify](http://browserify.org/), [stylus](http://learnboost.github.io/stylus/), [nib](https://github.com/visionmedia/nib), [GNU Make](http://www.gnu.org/software/make/) and [git](http://git-scm.com/).
 
 ## Getting Started
 ```bash
@@ -10,7 +10,8 @@ $ git clone https://github.com/Hanse/asamoah
 $ cd asamoah
 $ rm -rf .git
 $ git init
-$ git commit -am "Initial commit"
+$ git add .
+$ git commit -m "Initial commit"
 $ npm install
 ```
 
@@ -39,7 +40,7 @@ $ watch make
 JS and CSS files are by default compressed when `NODE_ENV` is set to something other than `development`.
 
 ```bash
-NODE_ENV=production make
+$ NODE_ENV=production make
 ```
 
 ## License
