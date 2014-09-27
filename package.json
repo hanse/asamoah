@@ -1,14 +1,24 @@
 {
-  "name": "make-stylus",
+  "name": "asamoah",
   "version": "0.0.1",
-  "description": "Opinionated frontend setup for Browserify, stylus, nib and GNU Make.",
+  "description": "Opinionated frontend setup for Browserify, React, stylus, nib and GNU Make.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Hanse/asamoah"
+  },
   "main": "index.js",
   "author": "Hanse",
   "license": "MIT",
+  "keywords": ["skeleton", "setup", "browserify", "react", "stylus", "nib", "make", "gnu make"],
   "dependencies": {
-    "browserify": "^4.1.11",
-    "nib": "^1.0.3",
-    "stylus": "^0.46.3",
-    "uglify-js": "^2.4.14"
+    "browserify": "latest",
+    "nib": "latest",
+    "react": "latest",
+    "reactify": "latest",
+    "stylus": "latest",
+    "uglify-js": "latest"
+  },
+  "devDependencies": {
+    "watchify": "latest"
   }
 }

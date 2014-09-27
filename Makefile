@@ -6,6 +6,7 @@
 STYLUS     = node_modules/.bin/stylus
 UGLIFY     = node_modules/.bin/uglifyjs
 BROWSERIFY = node_modules/.bin/browserify
+WATCHIFY   = node_modules/.bin/watchify
 NIB        = node_modules/nib/lib
 
 #
@@ -26,7 +27,7 @@ JS_MAIN    = assets/js/index.js
 #
 
 CSS        = $(shell find assets/css -name "*.styl")
-JS         = $(shell find assets/css -name "*.js")
+JS         = $(shell find assets/js -name "*.js")
 
 #
 # Compiled CSS and JS Files
@@ -40,7 +41,7 @@ BUILD_JS   = public/app.js
 # See https://github.com/substack/node-browserify/wiki/list-of-transforms
 #
 
-TRANSFORMS =
+TRANSFORMS = -t reactify
 
 #
 # Default task
@@ -69,6 +70,19 @@ ifneq ($(NODE_ENV), development)
 else
 	$(BROWSERIFY) $(TRANSFORMS) $(JS_MAIN) > $(BUILD_JS)
 endif
+
+
+watch-js:
+	$(WATCHIFY) $(TRANSFORMS) $(JS_MAIN) -v -o $(BUILD_JS)
+
+watch-css: $(BUILD_CSS)
+	@true
+
+watch:
+	@foreman start
+
+node_modules: package.json
+	@npm install
 
 #
 # Start a local dev server listening on PORT
