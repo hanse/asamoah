@@ -1,6 +1,6 @@
 {
   "name": "asamoah",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Opinionated frontend setup for Browserify, React, stylus, nib and GNU Make.",
   "repository": {
     "type": "git",
@@ -9,7 +9,16 @@
   "main": "index.js",
   "author": "Hanse",
   "license": "MIT",
-  "keywords": ["skeleton", "setup", "browserify", "react", "stylus", "nib", "make", "gnu make"],
+  "keywords": [
+    "skeleton",
+    "setup",
+    "browserify",
+    "react",
+    "stylus",
+    "nib",
+    "make",
+    "gnu make"
+  ],
   "dependencies": {
     "browserify": "latest",
     "nib": "latest",
